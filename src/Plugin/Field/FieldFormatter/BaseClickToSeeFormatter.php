@@ -63,10 +63,11 @@ abstract class BaseClickToSeeFormatter extends FormatterBase
     $form = parent::settingsForm($form, $form_state);
 
     $field_definition = $this->fieldDefinition;
-    $formatters = $this->formatterPluginManager->getOptions($field_definition->getType());
+    $formatters = $this->formatterPluginManager->getOptions($field_definition->getType()) ?? [];
 
-    foreach ($this->getSupportedPreFormatterKeys() as $key) {
-      if (!isset($supported_formatters[$key])) {
+    $supported_formatters = $this->getSupportedPreFormatterKeys();
+    foreach ($formatters as $key => $value) {
+      if (!in_array($key, $supported_formatters)) {
         unset($formatters[$key]);
       }
     }
