@@ -1,0 +1,7 @@
+click-to-see:
+  version: 1.x
+  js:
+    js/click-to-see.js: {}
+  css:
+    theme:
+      css/click-to-see.css: {}

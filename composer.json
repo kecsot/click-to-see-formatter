@@ -1,0 +1,12 @@
+{
+    "name": "kecsot/click_to_see_formatter",
+    "description": "Click To See Formatter",
+    "type": "drupal-custom-module",
+    "authors": [
+        {
+            "name": "kecsot",
+            "role": "Maintainer"
+        }
+    ],
+    "minimum-stability": "dev"
+}

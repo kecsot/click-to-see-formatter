@@ -1,0 +1,5 @@
+name: Click To See Formatter
+type: module
+description: Provides a formatter to hide value
+package: Custom
+core_version_requirement: ^9 || ^10

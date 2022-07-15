@@ -1,0 +1,7 @@
+.click-to-see .click-to-see-clicker {
+  cursor: pointer;
+}
+
+.click-to-see .click-to-see-content.hide{
+  display: none;
+}
