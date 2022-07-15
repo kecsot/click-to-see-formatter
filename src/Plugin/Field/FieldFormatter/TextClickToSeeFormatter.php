@@ -5,7 +5,7 @@ namespace Drupal\click_to_see_formatter\Plugin\Field\FieldFormatter;
 /**
  *
  * @FieldFormatter(
- *   id = "click_to_see_formatter",
+ *   id = "click_to_see_text_formatter",
  *   label = @Translation("Click to see (Text)"),
  *   field_types = {
  *     "string",
