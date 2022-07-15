@@ -1,6 +1,8 @@
-# Click To See Drupal Module
+# Click To See Formatter Drupal Module
 This is text formatter (yet). This module is hide content until user doesn't click to '** Click to See **' text.
 The content will be visible after the click.
+
+> core_version_requirement: ^9 || ^10
 
 # Important !
 This module doesn't use ajax! The content is sent to client when it isn't visible! It's just CSS and JS.
