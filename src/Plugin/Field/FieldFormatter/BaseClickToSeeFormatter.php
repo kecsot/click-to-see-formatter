@@ -94,9 +94,11 @@ abstract class BaseClickToSeeFormatter extends FormatterBase
     $element = [];
 
     foreach ($items as $delta => $item) {
-      $pre_formatter = $this->getSetting('pre_type');
-
-      $content = $this->renderer->render($item->view(array('type' => $pre_formatter)));
+      if ($pre_formatter = $this->getSetting('pre_type')) {
+        $content = $this->renderer->render($item->view(array('type' => $pre_formatter)));
+      } else {
+        $content = $item->value;
+      }
 
       $element[$delta] = [
         '#theme' => 'click_to_see',
