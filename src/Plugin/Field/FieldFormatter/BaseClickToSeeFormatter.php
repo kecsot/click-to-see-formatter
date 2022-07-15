@@ -54,7 +54,7 @@ abstract class BaseClickToSeeFormatter extends FormatterBase
   public static function defaultSettings(): array
   {
     return [
-        'pre_type' => '',
+        'pre_formatter' => '',
       ] + parent::defaultSettings();
   }
 
@@ -95,8 +95,8 @@ abstract class BaseClickToSeeFormatter extends FormatterBase
     $element = [];
 
     foreach ($items as $delta => $item) {
-      if ($pre_formatter = $this->getSetting('pre_type')) {
-        $content = $this->renderer->render($item->view(array('type' => $pre_formatter)));
+      if ($pre_formatter = $this->getSetting('pre_formatter')) {
+        $content = $this->renderer->render($item->view(array('pre_formatter' => $pre_formatter)));
       } else {
         $content = $item->value;
       }
